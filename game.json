@@ -1,0 +1,57 @@
+{
+	"title": "First Adventure",
+	"rooms": [{
+			"id": 0,
+			"entryText": "You enter big nice room",
+			"description": "A big room with a cute girl in it",
+			"neighbours": [{
+				"name" : "door",
+				"roomId": 1,
+				"triggerId": 0,
+				"open": false
+			}],
+			"items": [0],
+			"characters" : [0]
+		},
+		{
+			"id": 1,
+			"entryText": "You are now outside",
+			"description": "Outside",
+			"neighbours": [{
+				"name": "door",
+				"roomId": 0,
+				"triggerId": null,
+				"open": true
+			}],
+			"items": [],
+			"characters" : [0]
+		}
+	],
+	"characters": [{
+		"id": 0,
+		"name": "nagato",
+		"description": "It's Nagato!",
+		"states": [
+			{
+				"id": 0,
+				"entry_condition": null,
+				"lines": ["Hey I'm Nagato",	"I really like flowers"],
+				"neighbours": [1],
+				"reactive_items": { "0" : 0}
+			},
+			{
+				"id": 1,
+				"entry_condition": 0,
+				"lines": ["Oh a flower!", "Should we go on a date?"],
+				"neighbours": [],
+				"reactive_items": {}
+			}
+		]
+	}],
+
+	"items": [{
+		"id": 0,
+		"name": "flower",
+		"description": "It's a flower"
+	}]
+}
